@@ -17,15 +17,18 @@ public class HelloWorld {
 
 *`public`*: là một Access Modifier biểu diễn tính nhìn thấy, nhìn thấy tất cả
 
-*`static`*: là từ khoá, mà nếu chúng ta khai báo bất cứ phương thức nào là static thì nó còn được gọi là **phương thức tĩnh** hoặc **phương thức static**. Lợi thế chủ yếu của phương thức static là không cần thiết tạo đối tượng để triệu hồi phương thức static. Phương thức main được thực thi bởi JVM, vì thế bạn không cần thiết tạo một đối tượng để gọi phương thức main. Việc này giúp tiết kiệm bộ nhớ.
+*`static`*: là từ khoá, mà nếu chúng ta khai báo bất cứ phương thức nào là static thì nó còn được gọi là **phương thức tĩnh** hoặc **phương thức static**. 
 
-*`void`*: là kiểu trả về của phương thức, nghĩa là phương thức không trả về bất cứ giá trị nào.
+=> Đối với phương thức static là không cần thiết tạo đối tượng để triệu hồi phương thức static. Phương thức ` main ` được thực thi bởi JVM, vì thế bạn không cần thiết tạo một đối tượng để gọi phương thức main => tiết kiệm bộ nhớ.
 
-`*main*`: đại diện cho khởi động chương trình.
 
-`*String[] args*`: được sử dụng cho tham số dòng lệnh.
+**`void`**: là kiểu trả về của phương thức, nghĩa là phương thức không trả về bất cứ giá trị nào.
 
-`*System.out.println()*`: được sử dụng như là lệnh in. 
+**`main`**: đại diện cho khởi động chương trình.
+
+**`String[] args`**: được sử dụng cho tham số dòng lệnh.
+
+**`System.out.println()`**: được sử dụng như là lệnh in. 
 
 Có nhiều cách viết 1 chương trình java
 ```java
@@ -49,9 +52,9 @@ https://kungfutech.edu.vn/bai-viet/java/cau-truc-mot-chuong-trinh-java
 Để nhập dữ liệu từ bàn phím trong Java, chúng ta sử dụng lớp Scanner
 >lớp Scanner là một lớp nằm trong gói java.util, được sử dụng để đọc dữ liệu đầu vào từ các nguồn khác nhau như luồng đầu vào, người dùng, tệp
 
-Đầu tiên phải import thử viện vào: import java.util.Scanner;
+Đầu tiên phải import thử viện vào: **`import java.util.Scanner`**;
 
-Sau đó ta gọi và khởi tạo đối tượng từ lớp Scanner: Scanner scan = new Scanner(System.in);
+Tạo đối tượng từ lớp `Scanner`: **`Scanner scan = new Scanner(System.in);`**
 
 ```java
 import java.util.Scanner;
@@ -80,7 +83,7 @@ Tên của bạn là: NAD
 ```
 **Cú pháp **
 
-`(data-type) (variable-name) = scan.next...();`
+>`(data-type) (variable-name) = scan.next...();`
 
 |Phương thức| Mô tả|
 |---|---|
@@ -106,21 +109,23 @@ Tên của bạn là: NAD
 `System.out.print(“ ”);`  : Xuất kết quả ra màn hình nhưng con trỏ chuột không xuống dòng.
 
 `System.out.printf(“ ”);`  : Xuất ra màn hình kết quả đồng thời có thể định dạng được kết quả đó nhờ vào các đối số thích hợp.
+
+>**`Giống printf trong C`**
 ![Alt text](https://caodang.fpt.edu.vn/wp-content/uploads/3.jpg-1.png)
 
 
 #### 2. Biến
-Trong Java, **`Biến`** là tên của vùng nhớ được lưu trong bộ nhớ stack
+Trong Java, **`Biến`** là một cái tên được gán cho một vùng nhớ lưu trữ giá trị trong chương trình 
 
-Có 3 kiểu biến trong Java
+**Có 3 kiểu biến trong Java**
 
 - Biến cục bộ(biến local)
 - Biến toàn cục(biến instance)
 - Biến tĩnh(biến static)
 
-Có 2 kiểu dữ liệu trong Java
+**Có 2 kiểu dữ liệu trong Java**
 - Kiểu dữ liệu nguyên thuỷ(primitive)
-- Kiểu dữ liệu đối tượng
+- Kiểu dữ liệu đối tượng(kiểu lớp bao: swapper class)
 
 `Cú pháp khai báo biến`
 ```java
@@ -149,11 +154,9 @@ public class Bien {
 
 - Biến cục bộ được tạo bên trong các phương thức, contructor, block và sẽ bị phá hủy khi kết thúc các phương thức, contructor và block.
 
-- Không được sử dụng “access modifier” khi khai báo biến cục bộ.
+- Không được sử dụng “`access modifier`” khi khai báo biến cục bộ.
 
-- Các biến cục bộ sẽ nằm trên vùng bộ nhớ stack của bộ nhớ.
-
-- Bạn cần khởi tạo giá trị mặc định cho biến cục bộ trước khi có thể sử dụng.
+- **Phải khởi tạo giá trị cho biến cục bộ trước khi có thể sử dụng.**
 
 ví dụ: `khởi tạo biến local`:
 ```java
@@ -170,25 +173,25 @@ public class Bien {
     }
 }
 Viết phương thức sayHello
-ở phương thức main tạo một object là bienLocal
+ở phương thức main: tạo một object bienLocal của class Bien
 object bienLocal gọi đến phương thức sayHello
 
 Kết quả: Gia tri cua n la: 10
 ```
 
-`Chú ý` : nếu không khởi tạo giá trị cho biến local thì chương trình Java sẽ báo lỗi khi biên dịch
+`Chú ý` : *nếu không khởi tạo giá trị cho biến local thì chương trình Java sẽ báo lỗi khi biên dịch*
 
 ##### b. Biến instance(biến toàn cục) trong Java
 
 - Biến instance được khai báo trong một lớp(class), bên ngoài các phương thức, constructor và các block.
 
-- Biến instance được lưu trong bộ nhớ heap.
+- Biến instance được lưu trong bộ nhớ heap. <còn biến local thì lưu trên bộ nhớ stack>
 
 - Biến instance được tạo khi một đối tượng được tạo bằng việc sử dụng từ khóa “new” và sẽ bị phá hủy khi đối tượng bị phá hủy.
 
 - Biến instance có thể được sử dụng bởi các phương thức, constructor, block, ... Nhưng nó phải được sử dụng thông qua một đối tượng cụ thể.
 
-- Bạn được phép sử dụng "access modifier" khi khai báo biến instance, mặc định là "default".
+- **Được phép sử dụng "access modifier" khi khai báo biến toàn cục, mặc định là "default".**
 
 - Biến instance có giá trị mặc định phụ thuộc vào kiểu dữ liệu của nó. Ví dụ nếu là kiểu int, short, byte thì giá trị mặc định là 0, kiểu double thì là 0.0d, ... Vì vậy, bạn sẽ không cần khởi tạo giá trị cho biến instance trước khi sử dụng.
 
@@ -242,7 +245,7 @@ Biến static được tạo khi chương trình bắt đầu chạy và chỉ b
 
 - Giá trị mặc định của biến static phụ thuộc vào kiểu dữ liệu bạn khai báo tương tự biến instance.
 
-- Biến static được truy cập thông qua tên của class chứa nó, với cú pháp: TenClass.tenBien.
+- **Biến static được truy cập thông qua tên của class chứa nó, với cú pháp: TenClass.tenBien.**
 
 - *Trong class, các phương thức sử dụng biến static bằng cách gọi tên của nó* `khi phương thức đó cũng được khai báo với từ khóa "static"`.
 
@@ -272,10 +275,9 @@ Ten : 21
 ##### d. các kiểu dữ liệu trong Java
 Có hai hiểu dữ liệu trong Java
 
-- Kiểu dữ liệU nguyên thuỷ
+- Kiểu dữ liệu nguyên thuỷ
 
-    byte, char, boolean, int, long long, float, ...
-
+    ![](https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/329967746_494048472918913_694210227649147808_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Ue6kcQD95xUAX89LZfM&_nc_ht=scontent.fhan2-4.fna&oh=03_AdRv5hD_eLmFtcpsx0HJt-wDRYKI51KaCimErMTVFUVNBA&oe=640B01B6)
 - Kiểu dữ liệu đối tượng
 
     | Kiểu dữ liệu | Mô tả |
@@ -428,6 +430,8 @@ int[] arr = {4, 3, 2, 8 , 6};
 Arrays.sort(arr);
 
 ```
+
+`>sử dụng thuộc tính length để lấy số lượng phần tử của mảng`
 Tìm hiểu thêm:
 https://kungfutech.edu.vn/bai-viet/java/mang-array-trong-java
 
@@ -466,7 +470,7 @@ public class Test {
 Tìm hiểu thêm: https://kungfutech.edu.vn/bai-viet/java/ham-phuong-thuc-trong-java
 
 #### String
-
+https://viettuts.vn/java-string
 https://kungfutech.edu.vn/bai-viet/java/string-trong-java
 
 #### 7. Wapper class 
@@ -492,7 +496,7 @@ Ví dụ chuyển kiểu dữ liệu nguyên thủy thành kiểu Wrapper
 ```java
 public class WrapperExample1 {
     public static void main(String args[]) {
-        // Đổi int thành Integer
+        // Đổi int thành Integer (đổi sang lớp bao)
         int a = 20;
         Integer i = Integer.valueOf(a);// đổi int thành Integer
         Integer j = a;// autoboxing, tự động đổi int thành Integer trong nội bộ trình biên dịch
@@ -527,6 +531,10 @@ tham khảo thêm: https://kungfutech.edu.vn/bai-viet/java/lop-string-trong-java
 #### 9. Math class
 - import java.lang.Math
 - Khi cần gọi hàm nào thì chỉ cần Math. + hàm cần gọi
+
+![](https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/329723183_1550754502075598_7003334989458999152_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=qjWlBjHgYEsAX_sRNCZ&_nc_oc=AQkyW6tWHt7WD4UhusEfiX8ueaZYoLvUymEXP0OrgH4cPvWCwSzfU1NDPN1JeDBgEEs&_nc_ht=scontent.fhan2-3.fna&oh=03_AdRbmbKgBHEXQkTzvjvSXRaPIPiQpqmTmIGw3rX8sSVwtg&oe=640B0676)
+
+
 
 ## II. Regex
 Java Regex hoặc Regular Expression (biểu thức chính quy) là một API để định nghĩa một mẫu để tìm kiếm hoặc thao tác với chuỗi. Nó được sử dụng rộng rãi để xác định ràng buộc trên các chuỗi như xác thực mật khẩu, email, kiểu dữ liệu datetime, ...
@@ -831,6 +839,11 @@ Chốt lại là:
 - Protected access modifier có thể được áp dụng cho biến, phương thức, constructor. Nó không thể áp dụng cho lớp.
 
 Xem ví dụ ở https://viettuts.vn/java/access-modifier-trong-java
+
+![](https://scontent.fhan2-5.fna.fbcdn.net/v/t1.15752-9/329826934_728124735625219_1097483599118444478_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4Yj5GjTMMIcAX_UP_cd&_nc_ht=scontent.fhan2-5.fna&oh=03_AdSGsRHGcOjLX5O065cKEYqQLCWcVoy86d0vh88Zg4RD8g&oe=640B380A)
+
+
+![](https://scontent.fhan2-5.fna.fbcdn.net/v/t1.15752-9/330105613_1126128271393549_4183457739891090957_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Fl1bgZD-tHcAX_96Y8y&_nc_ht=scontent.fhan2-5.fna&oh=03_AdSVIRN8NxqjTFECjvVxPrUBop83fNYMiDnpwGcuYMf6sg&oe=640B2DA7)
 
 
 #### 5. Modifier static
