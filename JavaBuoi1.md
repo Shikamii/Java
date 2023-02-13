@@ -521,6 +521,11 @@ public class WrapperExample2 {
 }
 ```
 
+**Từ một kiểu dữ liệu bình thường int, char,,, thì đều có thể chuyển nó sang dạng wrapper kiểu String**
+
+![](https://scontent.fhan2-5.fna.fbcdn.net/v/t1.15752-9/330850834_918045222709847_6900395283448473138_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=NldGOwUQa1wAX_3ZkjX&_nc_ht=scontent.fhan2-5.fna&oh=03_AdTan3jzIEsBClYYM73wL8ChN8KrWWDw28x4SmO_JwndcQ&oe=6411A8D3)
+
+
 tìm hiểu thêm:
 https://kungfutech.edu.vn/bai-viet/java/lop-wrapper-trong-java
 #### 8. String classes
