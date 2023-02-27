@@ -435,6 +435,9 @@ Arrays.sort(arr);
 Tìm hiểu thêm:
 https://kungfutech.edu.vn/bai-viet/java/mang-array-trong-java
 
+
+![](https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/333730603_1411117176092523_4334721918916623627_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=KhcaOccWsBkAX_G1D1g&_nc_ht=scontent.fhan2-4.fna&oh=03_AdTqgjjqNexqx5-gCPH9a5JXQBjIbiDjfQbIWJ1coVpIKA&oe=64248123)
+
 #### Hàm trong java
 cú pháp
 ```
