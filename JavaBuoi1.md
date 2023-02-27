@@ -1021,3 +1021,6 @@ Lưu ý
 - Nếu trong lớp có phương thức trừu tượng thì lớp đó phải được khai báo là trừu tượng
 - Nếu một lớp kế thừa từ lớp trừu tượng thì: hoặc chúng phải ghi đè tất cả các phương thức ảo của lớp cha, hoặc lớp đó phải là lớp trừu tượng
 - Không thể tạo ra đối tượng của lớp trừu tượng
+
+
+![](https://scontent.fhan2-5.fna.fbcdn.net/v/t1.15752-9/332873650_6082115645160549_7698206015188706367_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=PSxpBbKv4C0AX_aXdAC&tn=qf_Q2_EjAnC2Tavm&_nc_ht=scontent.fhan2-5.fna&oh=03_AdQrixTyY1YUtFBzhcIxJgFfyW8kq7DB9qoSvX3gqzHx6w&oe=6424927C)
